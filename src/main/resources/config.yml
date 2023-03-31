@@ -1,0 +1,36 @@
+enabled: true
+###############################################
+# every x amount of SUGAR_CANE mined          #
+# the {extra_multiplier} gets increased by y  #
+###############################################
+upgradable-multiplier: true
+upgradable-multiplier-mine-amount: 10000
+upgradable-multiplier-increase-amount: 0.1
+upgradable-multiplier-max-extra-multiplier: 2.0
+###############################################
+# will no longer get SUGAR_CANE upon mining   #
+# sell-interval-seconds updates on startup    #
+###############################################
+auto-sell: true
+auto-sell-interval-seconds: 5
+auto-sell-log-to-console: true
+
+item-update-interval-seconds: 5
+item-display-name: "&f&l► &e&lHarvester &6&lHoe"
+item-lore:
+- ""
+- "&6&lInformation:"
+- " &6▎ &7Multiplier: &f{multiplier}x &8(&f+{extra_multiplier}x&8)"
+- " &6▎ &7Crops: &f{amount}"
+- " &6▂▂▂▂▂▂▂▂▂"
+
+lang-disabled: "&4&l[!] &cHarvester Hoes are currently disabled."
+lang-incorrect-block: "&4&l[!] &cYou can only mine sugar cane with a Harvester Hoe."
+lang-cannot-break-bottom-block: "&4&l[!] &cYou cannot break the bottom block of sugar cane with a Harvester Hoe."
+lang-cannot-place-ontop-of-sugarcane: "&4&l[!] &cYou cannot place sugar cane ontop of sugar cane."
+lang-toggle-autosell-mode: "&8[&bHarvesterHoes&8] &fYou have toggled the Harvester Hoe Auto Sell {mode}"
+lang-reloaded-config: "&8[&bHarvesterHoes&8] &fReloaded the config."
+lang-given-harvester-hoe: "&8[&bHarvesterHoes&8] &fGiven &e{player} &fa &e{multiplier}x &fmultiplier &eHarvester Hoe."
+lang-autosell-disabled: "&4&l[!] &cAuto Sell is currently disabled."
+lang-autosell-sell-player-message: "&f&l(&e&l!&f&l) &fYou have sold &a{amount} &fSugar Cane for &a${sell_amount}."
+lang-autosell-sell-console-message: "{player} has just sold {amount} for ${sell_amount}"
