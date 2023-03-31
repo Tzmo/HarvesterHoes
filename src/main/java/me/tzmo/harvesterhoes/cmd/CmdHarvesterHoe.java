@@ -42,6 +42,12 @@ public class CmdHarvesterHoe implements CommandExecutor {
 
     public void handleGive(CommandSender sender, String[] args)
     {
+        if (!sender.hasPermission("harvesterhoes.give"))
+        {
+            sender.sendMessage(MiscUtil.parse("&cNo Permission."));
+            return;
+        }
+
         if (args.length != 3)
         {
             sender.sendMessage(MiscUtil.parse("&c/harvesterhoe give <player> <multiplier>"));
@@ -81,6 +87,12 @@ public class CmdHarvesterHoe implements CommandExecutor {
 
     public void handleReload(CommandSender sender)
     {
+        if (!sender.hasPermission("harvesterhoes.reload"))
+        {
+            sender.sendMessage(MiscUtil.parse("&cNo Permission."));
+            return;
+        }
+
         HarvesterHoes.reloadCfg();
         sender.sendMessage(MiscUtil.parse(Objects.requireNonNull(HarvesterHoes.getCfg().getString("lang-reloaded-config"))));
     }
