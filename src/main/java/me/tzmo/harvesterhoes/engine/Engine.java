@@ -54,7 +54,7 @@ public class Engine implements Listener {
 
         if (blockBelow.getBlock().getType() != Material.SUGAR_CANE)
         {
-            player.sendMessage(MiscUtil.parse(Objects.requireNonNull(HarvesterHoes.getCfg().getString("lang-incorrect-block"))));
+            player.sendMessage(MiscUtil.parse(Objects.requireNonNull(HarvesterHoes.getCfg().getString("lang-cannot-break-bottom-block"))));
             event.setCancelled(true);
             return;
         }
