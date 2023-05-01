@@ -1,6 +1,5 @@
 package me.tzmo.harvesterhoes.util;
 
-import net.brcdev.shopgui.ShopGuiPlusApi;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -34,19 +33,5 @@ public class MiscUtil {
         }
 
         return blocks;
-    }
-
-    public static double getSellPrice(Material item)
-    {
-        ItemStack itemStack = new ItemStack(item, 1);
-
-        double price = ShopGuiPlusApi.getItemStackPriceSell(itemStack);
-
-        if (price == -1.0)
-        {
-            price = 0.0;
-        }
-
-        return price;
     }
 }

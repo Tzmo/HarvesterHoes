@@ -3,7 +3,6 @@ package me.tzmo.harvesterhoes.task;
 import me.tzmo.harvesterhoes.HarvesterHoes;
 import me.tzmo.harvesterhoes.util.MiscUtil;
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 
 import java.util.Iterator;
@@ -20,7 +19,7 @@ public class TaskAutoSell {
             if (!HarvesterHoes.getCfg().getBoolean("auto-sell")) return;
             if (Bukkit.getOnlinePlayers().isEmpty()) return;
 
-            double sellPrice = MiscUtil.getSellPrice(Material.SUGAR_CANE);
+            double sellPrice = HarvesterHoes.getCfg().getDouble("auto-sell-sugar-cane-sell-price");
             Iterator<Map.Entry<Player, Integer>> it = HarvesterHoes.toSell.entrySet().iterator();
 
             while (it.hasNext())

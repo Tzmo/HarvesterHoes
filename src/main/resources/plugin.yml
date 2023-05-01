@@ -3,7 +3,7 @@ version: '${project.version}'
 main: me.tzmo.harvesterhoes.HarvesterHoes
 api-version: 1.19
 authors: [ Tzmo ]
-depend: [ NBTAPI, ShopGUIPlus, Vault ]
+depend: [ NBTAPI, Vault ]
 description: A simple Harvester Hoe plugin with multipliers that can be upgradable.
 
 commands:

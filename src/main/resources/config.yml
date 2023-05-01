@@ -14,6 +14,7 @@ upgradable-multiplier-max-extra-multiplier: 2.0
 auto-sell: true
 auto-sell-interval-seconds: 5
 auto-sell-log-to-console: true
+auto-sell-sugar-cane-sell-price: 20.0
 
 item-update-interval-seconds: 5
 item-display-name: "&f&l► &e&lHarvester &6&lHoe"
